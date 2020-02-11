@@ -142,6 +142,11 @@ log-reader-configmap-678cbc5868-r4sfj   1/1     Running   0          2m
 $ kubectl logs log-reader-configmap-<random>
 ```
 
+8) get inside the pod and see ENV
+
+```
+$ kubectl exec -it log-reader-configmap-<random> /bin/sh
+```
 
 
 
