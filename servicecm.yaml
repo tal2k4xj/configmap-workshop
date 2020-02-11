@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: configmap-test
+  labels:
+    app: configmap-test
+spec:
+  ports:
+  - port: 80
+    targetPort: http-server
+  selector:
+    app: configmap-test
+  type: NodePort
