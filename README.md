@@ -99,12 +99,15 @@ $ nano reader-cm-deployment.yaml
 4) Copy & Paste yaml
 
 ```yml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: log-reader-configmap
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: logreader
   template:
     metadata:
       labels:
